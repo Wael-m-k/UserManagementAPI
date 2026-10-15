@@ -1,0 +1,17 @@
+Activity 1: Scaffolding and Routing
+1.Scaffolding: Copilot generated the boilerplate code for the ASP.NET Core Minimal API and the basic CRUD operations using a thread-safe.
+2.Data Transfer Objects (DTOs): Copilot suggested using C# 9 record types (UserCreateDto, UserUpdateDto) to manage incoming data securely.
+3.Code Refactoring: Copilot helped refactor the code to use app.MapGroup("/users") for cleaner and more maintainable routing.
+
+Activity 2: Debugging
+
+1. Identifying Vulnerabilities: Copilot identified missing input validations and suggested using Regex to enforce correct email formats.
+2. Exception Handling: Copilot helped implement try-catch blocks to all endpoints to prevent API crashes and return appropriate 500 Internal Server Error responses using Results.Problem().
+3. Refining Edge Cases: Copilot updated the routing logic to properly handle non-existent user IDs, ensuring the API returns a clear 404 Not Found message instead of failing.
+
+Activity 3: Middleware Implementation
+
+1. Global Error Handling: Copilot assisted in creating a middleware to catch unhandled exceptions globally, returning a standardized JSON error message (500 Internal server error).
+2. Authentication: Implemented a token-based authentication middleware to validate incoming requests, successfully returning 401 Unauthorized for missing or invalid tokens.
+3. Logging: Created a custom logging middleware to record the HTTP method, request path, and response status code for auditing purposes.
+4. Pipeline Configuration: Copilot helped arrange the middleware pipeline in the optimal security and performance order: Error-handling first, Authentication second, and Logging third.

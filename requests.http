@@ -1,0 +1,47 @@
+### Get all users unauthenticated
+GET http://localhost:5196/users
+Accept: application/json
+### Get all users authenticated
+GET http://localhost:5196/users
+Authorization: secret-token
+Accept: application/json
+###
+GET http://localhost:5196/test-error
+Accept: application/json
+
+### Get user by id (replace 1 with the id you want)
+GET http://localhost:5196/users/99
+Accept: application/json
+
+###
+
+### Create a new user
+POST http://localhost:5196/users
+Authorization: secret-token
+Content-Type: application/json
+
+{
+  "name": "basil",
+  "email": "basil@.com",
+  "department": "HR"
+}
+
+###
+
+### Update an existing user (partial or full). Replace 1 with the target id
+PUT http://localhost:5196/users/1
+Content-Type: application/json
+
+{
+  "name": "Alaa Updated",
+  "email": "alaa.updated@example.com",
+  "department": "Product"
+}
+
+###
+
+### Delete a user by id (replace 1 with the id to delete)
+DELETE http://localhost:5196/users/1
+Accept: application/json
+
+###
